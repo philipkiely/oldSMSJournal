@@ -1,3 +1,10 @@
+/*
+Google Docs Blue: #4884F3
+Mac iMessage Blue: #0362DC
+Mac iMessage Green: #03B73A
+Mac iMessage "Dark Mode" Background: #1C1C1C
+*/
+
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -32,7 +39,7 @@ div.shrink-phone {
 
 .me {
     float: right;
-    background-color: blue;
+    background-color: #0362DC;
     color: white;
 }
 .me::after {
@@ -42,6 +49,10 @@ div.shrink-phone {
       bottom: 0;
       width: 0.5em;
       height: 1em;
-      border-left: 0.5em solid blue;
+      border-left: 0.5em solid #0362DC;
       border-bottom-left-radius: 1em 0.5em;
+}
+
+#gDoc {
+    border: outset 4px #4884F3;
 }
