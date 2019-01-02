@@ -14,16 +14,16 @@ function SMSJTitle(){
             } else {
                 document.getElementById("Title"+txt.trim()).innerHTML += txt.charAt(i);
             }
-            setTimeout(function(){type(txt, i+1)}, 600);
+            setTimeout(function(){type(txt, i+1)}, 300);
         }
     }
     //call typing function on each text span
     function typeCaller(t, i=0){
         type(t[i]);
         if (i == 1) {
-            setTimeout(function(){typeCaller(t, i+1)}, 1200);
+            setTimeout(function(){typeCaller(t, i+1)}, 600);
         } else if (i < 4) {
-            setTimeout(function(){typeCaller(t, i+1)}, 3000);
+            setTimeout(function(){typeCaller(t, i+1)}, 1500);
         }
     }
     //wait a couple seconds on load.
