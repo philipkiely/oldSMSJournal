@@ -10,7 +10,7 @@ function SMSJTitle(){
         if (i < txt.length) { //with timeout this is a while loop
             if (i == 0) {
                 document.getElementById("Title"+txt.trim()).innerHTML = "<span id='TitleFirst" + txt.trim() + "'>" + txt.charAt(i) + "</span>";
-                document.getElementById("TitleFirst"+txt.trim()).style.color = "#0362DC"; //iMessage Blue
+                document.getElementById("TitleFirst"+txt.trim()).classList.add("first-letter-title")
             } else {
                 document.getElementById("Title"+txt.trim()).innerHTML += txt.charAt(i);
             }

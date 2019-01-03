@@ -72,3 +72,12 @@ div.shrink-phone {
 .bg-dark {
     background-color: #1C1C1C !important;
 }
+
+.first-letter-title {
+    color: #0362DC;
+}
+
+hr {
+    color: #03B73A;
+    background-color: #03B73A;
+}
