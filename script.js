@@ -32,6 +32,12 @@ function SMSJTitle(){
 
 window.onload = SMSJTitle();
 
+function setYear() {
+    document.getElementById("year").innerHTML = (new Date()).getFullYear();
+}
+
+window.onload = setYear();
+
 function beginSignup() {
     document.getElementById("signupArea").innerHTML = '<h4 class="card-header">Phone Number</h4><div class="card-body"><p>To get started, please enter and confirm your phone number.</p><form><input class="form-control" type="tel" required id="phoneNumber"><br><input class="form-control" type="tel" required id="phoneNumberConfirm"></form></div><div class="card-footer"><a onclick="getGoogle()" class="btn btn-primary cardButton">Next</a></div>'
     document.getElementById("phoneNumber").placeholder = "Phone Number";
