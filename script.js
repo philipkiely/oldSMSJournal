@@ -43,3 +43,8 @@ function beginSignup() {
     document.getElementById("phoneNumber").placeholder = "Phone Number";
     document.getElementById("phoneNumberConfirm").placeholder = "Confirm Phone Number";
 }
+
+function getGoogle() {
+    document.getElementById("signupArea").innerHTML = '<h4 class="card-header">Google Account</h4><div class="card-body"><p>What Google Account would you like to keep your journal on?</p><form><input class="form-control" type="text" required id="googleAccount"></form></div><div class="card-footer"><a onclick="getPayment()" class="btn btn-primary cardButton">Next</a></div>'
+    document.getElementById("googleAccount").placeholder = "Google Account";
+}
