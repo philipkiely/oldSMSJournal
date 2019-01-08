@@ -24,7 +24,7 @@ var Auth = (function() {
 						// To use it, set really-this-is-localhost.com to point to 127.0.0.1 in your hosts file
 						// Run a local webserver (I use the python http.server) and go to really-this-is-localhost.com to test it
             "clientId": "752165490166-j74ipne57mdk7la4vuv97d2i434ibjar.apps.googleusercontent.com",
-            "scope": "profile",
+            "scope": "profile https://www.googleapis.com/auth/documents",
 						"discoveryDocs": "https://www.googleapis.com/discovery/v1/apis?name=scripts"
         }).then(setAuth);
     }
@@ -53,17 +53,17 @@ var Auth = (function() {
         }
     }
 
+		// Revoke access to google account
 		function revoke() {
 				GoogleAuth.disconnect();
 		}
-		
+
+		// Grant access to google account
 		function signIn() {
 				GoogleAuth.signIn();
 		}
 		
-    return {loadClient, signIn};
+    return {loadClient, signIn, isAuthorized};
 })();
 Auth.loadClient();
-window.addEventListener('error', function(event) {
-  console.log('err', event);
-});
+
