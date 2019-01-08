@@ -5,7 +5,6 @@ var Auth = (function() {
 
     // Load Google API auth2 modules
     function loadClient() {
-				console.log("loadClient()");
         gapi.load("auth2", initClient);
     }
 
@@ -63,7 +62,6 @@ var Auth = (function() {
 				GoogleAuth.signIn();
 		}
 		
-    return {loadClient, signIn, isAuthorized};
+    return {loadClient, signIn, isAuthorized, GoogleAuth};
 })();
 Auth.loadClient();
-
