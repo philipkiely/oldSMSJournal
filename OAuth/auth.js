@@ -5,19 +5,22 @@ var Auth = (function() {
 
     // Load Google API auth2 modules
     function loadClient() {
+        console.log("LoadClient called")
         gapi.load("auth2", initClient);
     }
 
     // Set GoogleAuth
     function setAuth() {
+        console.log("setAuth called")
         GoogleAuth = gapi.auth2.getAuthInstance();
         GoogleAuth.isSignedIn.listen(updateStatus);
         var status = GoogleAuth.isSignedIn.get();
         updateStatus(status);
     }
-    
+
     // Initialize Google API Client
     function initClient() {
+        console.log("InitClient called")
         gapi.auth2.init({
             // This clientId is ONLY to be used in development, not production
             // To use it, set really-this-is-localhost.com to point to 127.0.0.1 in your hosts file
@@ -31,6 +34,7 @@ var Auth = (function() {
 
     // Update Sign In Status
     function updateStatus(signedIn) {
+        console.log("updateStatus called")
         var btn = document.getElementById("sign-in");
         var txt = document.getElementById("text");
         var info = document.getElementById("info");
@@ -55,14 +59,17 @@ var Auth = (function() {
 
     // Revoke access to google account
     function revoke() {
+        console.log("revoke called")
         GoogleAuth.disconnect();
     }
 
     // Grant access to google account
     function signIn() {
+        console.log("signin called")
         GoogleAuth.signIn();
     }
-    
+
     return {loadClient, signIn, isAuthorized, GoogleAuth};
 })();
-Auth.loadClient();
+window.onload = Auth.loadClient();
+window.onload = console.log("auth loaded")
