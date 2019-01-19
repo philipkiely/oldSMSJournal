@@ -10,7 +10,7 @@ def lambda_handler(event, context):
 
     # TODO: interface with cognito
     # if not cognito.user_exists(user):
-    #    error
+    #    return error
     # else:
     #    journals = cognito.get_user(user).get_journals()
 
@@ -20,5 +20,8 @@ def lambda_handler(event, context):
         journals = name_id_together
     else:
         journals += name_id_together + ","
-
-    # cognito.get_user(user).write_journals()
+    if len(journals) > 2048:
+        # return error
+    else:    
+        # cognito.get_user(user).write_journals()
+        # return success
