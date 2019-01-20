@@ -35,19 +35,19 @@ var Auth = (function() {
     // Update Sign In Status
     function updateStatus(signedIn) {
         console.log("updateStatus called")
-        var btn = document.getElementById("sign-in");
+        var btn = document.getElementById("googleSignin");
         var txt = document.getElementById("text");
         var info = document.getElementById("info");
         if (signedIn) {
             isAuthorized = true;
-            btn.onclick = revoke;
-            btn.innerHTML = "Revoke access!";
-            txt.innerHTML = "Authorized!";
+            //btn.onclick = revoke;
+            //btn.innerHTML = "Revoke access!";
+            //txt.innerHTML = "Authorized!";
             var user = GoogleAuth.currentUser.get();
             var profile = user.getBasicProfile();
             var name = profile.getName();
             var email = profile.getEmail();
-            info.innerHTML = "Name: " + name + "<br>Email: " + email;
+            //info.innerHTML = "Name: " + name + "<br>Email: " + email;
         } else {
             isAuthorized = false;
             btn.onclick = signIn;

@@ -63,9 +63,19 @@ function verifyNumber() {
 function getGoogle() {
     correct = verifyNumber();
     if (correct) {
-        document.getElementById("signupArea").innerHTML = '<h4 class="card-header">Google Account</h4><div class="card-body"><p>What Google Account would you like to keep your journal on?</p><form><input class="form-control" type="text" required id="googleAccount"></form></div><div class="card-footer"><a onclick="getPayment()" class="btn btn-primary cardButton">Next</a></div>'
+        document.getElementById("signupArea").innerHTML = '<h4 class="card-header">Google Account</h4><div class="card-body"><p>Grant access to your Google account to create journals.</p></div><div class="card-footer"><a onclick="getPayment()" id="googleSignin" class="btn btn-primary cardButton">Grant Access</a></div>'
         document.getElementById("googleAccount").placeholder = "Google Account";
     }
+}
+
+function getPayment() {
+    Auth.signIn(); //wait, verify
+    document.getElementById("signupArea").innerHTML = '<h4 class="card-header">Payment</h4><div class="card-body"><p>SMSJournal costs $1.49 per month, billed annually as $17.88. Your payment is processed securely by Stripe. To complete setup, please enter your credit card information.</p></div><div class="card-footer"><a onclick="getStripe()" id="stripeSignin" class="btn btn-primary cardButton">Pay Now</a></div>'
+}
+
+function getStripe() {
+    //get Payment
+    document.getElementById("signupArea").innerHTML = '<h4 class="card-header">Signup Complete</h4><div class="card-body"><p>Thank you for signing up for SMSJournal! To get started, check your phone for a welcome text message.</p></div><div class="card-footer"></div>'
 }
 
 //window.onload = alert("SMSJournal is a work in progress. To be notified of its completion, email info@grammiegram.com");

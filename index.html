@@ -14,10 +14,16 @@
     <script src="lib/jquery.min.js"></script>
     <!--boostrap 4 JS-->
     <script src="lib/bootstrap.bundle.min.js"></script>
-    <!--JS Animation Library-->
+    <!--JS Animation Library TODO: Remove, probably-->
     <script src="lib/anime.min.js"></script>
     <!--TESTING ONLY, TODO: Self Host Icons-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Google API Client Library-->
+    <script src="https://apis.google.com/js/client.js"></script>
+    <!--Authorization Request Script-->
+    <script src="auth.js"></script>
+    <!--Google Script Trigger-->
+    <script src="trigger.js"></script>
 </head>
 <body>
 <div class="container">
@@ -35,7 +41,7 @@
             <div class="card h-100" id="signupArea">
               <h4 class="card-header">Get SMSJournal Today!</h4>
               <div class="card-body">
-                <p>The premier instant message journaling service, just one dollar per month.<p>
+                <p>The premier instant message journaling service, just $1.49 per month.<p>
                 </div>
                 <div class="card-footer">
                     <a onclick="beginSignup()" class="btn btn-primary cardButton">Get Started</a>
