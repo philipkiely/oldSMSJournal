@@ -81,4 +81,18 @@ function getStripe() {
 //window.onload = alert("SMSJournal is a work in progress. To be notified of its completion, email info@grammiegram.com");
 //<a onclick="getStripe()" id="stripeSignin" class="btn btn-primary cardButton">Pay Now</a>
 
-document.getElementById("sendMessage").addEventListener() //TODO
+document.getElementById("sendMessage").addEventListener('keypress', function(e){
+    if (e.keyCode == 13) {
+        field = document.getElementById("sendMessage");
+        str = field.value;
+        //delete the field
+        field.value = "";
+        //appendChild new message
+        newMessage = document.createElement("div");
+        newMessage.className = "message me"
+        newMessage.innerHTML = str;
+        document.getElementById("SMSMessages").appendChild(newMessage);
+        //add to google docs with timestamp
+        
+    }
+});
