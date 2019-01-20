@@ -17,9 +17,9 @@
   <!--Google API Client Library-->
   <script src="https://apis.google.com/js/client.js"></script>
   <!--Authorization Request Script-->
-  <script src="auth.js"></script>
+  <script src="/auth.js"></script>
   <!--Google Script Trigger-->
-  <script src="trigger.js"></script>
+  <script src="/trigger.js"></script>
 </head>
 <body>
   <button id="sign-in" onclick="Auth.signIn();">
@@ -27,5 +27,16 @@
   </button>
   <p id="text">Unauthorized!</p>
   <p id="info"> </p>
+  <form action="your-server-side-code" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_sR3Hd5BgBbf0BaeYEJx1qtVU"
+    data-amount="1788"
+    data-name="GrammieGram LLC"
+    data-description="Widget"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-locale="auto">
+  </script>
+</form>
 </body>
 </html>

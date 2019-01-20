@@ -70,7 +70,7 @@ function getGoogle() {
 
 function getPayment() {
     Auth.signIn(); //wait, verify
-    document.getElementById("signupArea").innerHTML = '<h4 class="card-header">Payment</h4><div class="card-body"><p>SMSJournal costs $1.49 per month, billed annually as $17.88. Your payment is processed securely by Stripe. To complete setup, please enter your credit card information.</p></div><div class="card-footer"><a onclick="getStripe()" id="stripeSignin" class="btn btn-primary cardButton">Pay Now</a></div>'
+    document.getElementById("signupArea").innerHTML = '<h4 class="card-header">Payment</h4><div class="card-body"><p>SMSJournal costs $1.49 per month, billed annually as $17.88. Your payment is processed securely by Stripe. To complete setup, please enter your credit card information.</p></div><div class="card-footer"><a onclick="PayWithStripe()" id="StripePurchase" class="btn btn-primary cardButton">Pay with Stripe</a></div>'
 }
 
 function getStripe() {
@@ -79,3 +79,4 @@ function getStripe() {
 }
 
 //window.onload = alert("SMSJournal is a work in progress. To be notified of its completion, email info@grammiegram.com");
+//<a onclick="getStripe()" id="stripeSignin" class="btn btn-primary cardButton">Pay Now</a>

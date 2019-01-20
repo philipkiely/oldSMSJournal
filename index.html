@@ -18,6 +18,8 @@
     <script src="lib/anime.min.js"></script>
     <!--TESTING ONLY, TODO: Self Host Icons-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--stripe-->
+    <script src="https://checkout.stripe.com/checkout.js"></script>
     <!--Google API Client Library-->
     <script src="https://apis.google.com/js/client.js"></script>
     <!--Authorization Request Script-->
@@ -257,5 +259,30 @@
   </div><!-- /.container -->
 </footer>
 <script src="script.js"></script>
+<script>
+var handler = StripeCheckout.configure({
+  key: 'pk_test_sR3Hd5BgBbf0BaeYEJx1qtVU',
+  image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+  locale: 'auto',
+  token: function(token) {
+    // You can access the token ID with `token.id`.
+    // Get the token ID to your server-side code for use.
+  }
+});
+
+function PayWithStripe() {
+  // Open Checkout with further options:
+  handler.open({
+    name: 'GrammieGram LLC',
+    description: 'SMSJournal 1-year subscription',
+    amount: 1788
+  });
+}
+
+// Close Checkout on page navigation:
+window.addEventListener('popstate', function() {
+  handler.close();
+});
+</script>
 </body>
 </html>
