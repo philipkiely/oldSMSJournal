@@ -80,3 +80,5 @@ function getStripe() {
 
 //window.onload = alert("SMSJournal is a work in progress. To be notified of its completion, email info@grammiegram.com");
 //<a onclick="getStripe()" id="stripeSignin" class="btn btn-primary cardButton">Pay Now</a>
+
+document.getElementById("sendMessage").addEventListener() //TODO

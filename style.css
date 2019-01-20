@@ -104,3 +104,10 @@ hr {
     color: #03B73A;
     background-color: #03B73A;
 }
+
+#sendMessage {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 10px;
+}
