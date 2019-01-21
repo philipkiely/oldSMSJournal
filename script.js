@@ -81,7 +81,7 @@ function getStripe() {
 //window.onload = alert("SMSJournal is a work in progress. To be notified of its completion, email info@grammiegram.com");
 //<a onclick="getStripe()" id="stripeSignin" class="btn btn-primary cardButton">Pay Now</a>
 
-function addToGDoc(s) {
+function addToGDoc(s) { //TODO: Fix bug with send after edit
     timestamp = Date().toString().split(":").splice(0, 2).join(":");
     document.getElementById("gDoc").innerHTML = timestamp + "\n" + s + "\n\n" + document.getElementById("gDoc").innerHTML
 }
@@ -102,4 +102,4 @@ document.getElementById("sendMessage").addEventListener('keypress', function(e){
     }
 });
 
-window.onload(addToGDoc("Send a message to see it appear in Google Docs."))
+window.onload = addToGDoc("Send a message to see it appear in Google Docs.")
