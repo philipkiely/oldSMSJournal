@@ -45,7 +45,7 @@ div.shrink-phone {
 .me::after {
       content: "";
       position: absolute;
-      right: -0.5em;
+      right: 0;
       bottom: 0;
       width: 0.5em;
       height: 1em;
